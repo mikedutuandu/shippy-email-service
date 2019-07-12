@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	pb "github.com/EwanValentine/shippy-user-service/proto/user"
+	pb "github.com/mikedutuandu/shippy-user-service/proto/auth"
 	micro "github.com/micro/go-micro"
 )
 
@@ -20,7 +20,7 @@ func (sub *Subscriber) Process(ctx context.Context, user *pb.User) error {
 
 func main() {
 	srv := micro.NewService(
-		micro.Name("go.micro.srv.email"),
+		micro.Name("shippy.email.service"),
 		micro.Version("latest"),
 	)
 
